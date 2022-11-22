@@ -1,6 +1,20 @@
+# Deploy 
+
 `docker compose up` for a predefined data set.
 
 `docker compose -f docker-compose.yml -f docker-compose.rand.yml up` for a random data set.
+
+# API
+
+Entry url: `http://localhost:3000`
+
+`/users`
+
+`/users/:id/friends?order_by={id|firstname|gender}&order_type={asc|desc}`
+
+`/max-following`
+
+`/not-following`
 
 # Data sets
 
