@@ -1,6 +1,5 @@
 import { RandomUser } from './fake-users';
 import { UserSchema } from '../user/user-schema';
-import { FollowerSchema } from '../follower/follower-schema';
 import { FollowerFactory } from './follower-factory/follower-factory';
 
 export async function Initialize(totalUsers: number, followersFactory: FollowerFactory) {
