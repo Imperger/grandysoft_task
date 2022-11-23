@@ -29,7 +29,6 @@ class UserService {
                         {
                             model: UserSchema,
                             as: 'following',
-                            on: sequelize.where(sequelize.col('id'), '=', sequelize.col('following.followingId')),
                             required: true
                         }
                     ]
@@ -62,7 +61,6 @@ class UserService {
                 {
                     model: UserSchema,
                     as: 'following',
-                    on: sequelize.where(sequelize.col('following.id'), '=', sequelize.col('FollowerSchema.followingId')),
                     required: true
                 }
             ]

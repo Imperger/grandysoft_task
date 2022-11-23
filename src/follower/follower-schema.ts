@@ -18,10 +18,10 @@ export class FollowerSchema extends Model<Follower> {
     @Column
     declare followingId: number;
 
-    @BelongsTo(() => UserSchema, { as: 'follower' })
+    @BelongsTo(() => UserSchema, { as: 'follower', foreignKey: 'followerId' })
     declare follower: UserSchema;
 
-    @BelongsTo(() => UserSchema, { as: 'following' })
+    @BelongsTo(() => UserSchema, { as: 'following', foreignKey: 'followingId' })
     declare following: UserSchema;
 
     @BelongsTo(() => FollowerSchema, 'followingId')
