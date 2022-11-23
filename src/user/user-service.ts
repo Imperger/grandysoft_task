@@ -33,7 +33,8 @@ class UserService {
                         }
                     ]
                 }
-            ]
+            ],
+            order: [['id', 'asc']]
         }))
             .map(u => ({
                 ...ToPublicUser(u),
